@@ -9,9 +9,13 @@ h
 8src/main/java/org/example/controller/BookController.java,8\6\863c0ee3b55362ba745c83019ab8ca6f55e08955
 b
 2src/main/java/org/example/service/BookService.java,4\e\4e0afb3f42ab32527a23feda117f6bd25e7844be
-f
-6src/main/java/org/example/service/BookServiceImpl.java,4\b\4baa94509cbd87e182b9e0beb484e19b93349f11
 h
 8src/main/java/org/example/repository/BookRepository.java,b\7\b7783d39ca81aa027ce3a0f700c9f233ca4aa9da
 `
 0src/main/java/org/example/entity/BookEntity.java,8\e\8e7bab507d9e728ef6cf98c958018520dba04ab5
+Å
+Q.idea/sonarlint/securityhotspotstore/b/7/b7783d39ca81aa027ce3a0f700c9f233ca4aa9da,5\2\52476059c84c989423e422874ee16020bae66ee6
+k
+;src/main/java/org/example/service/impl/BookServiceImpl.java,4\9\49c61c65e1d97bd6e476160a50bd22ce21ce79d8
+Å
+Q.idea/sonarlint/securityhotspotstore/8/e/8e7bab507d9e728ef6cf98c958018520dba04ab5,6\0\607916c79de2ec6f23bbe68565ffedfd7272d172
