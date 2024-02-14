@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class BookController {
 
     final BookService service;
-    @PostMapping("/book")
+    @PostMapping("/add")
     @ResponseStatus(HttpStatus.CREATED)
     public void addBook(@RequestBody Book book){
         service.addBook(book);
@@ -28,5 +28,9 @@ public class BookController {
         return service.deleteBook(id)?
                  ResponseEntity.ok("Deleted"):
                  ResponseEntity.notFound().build();
+       }
+       @GetMapping("/search/{id}")
+        public  Book getBookById(@PathVariable long id){
+        return service.getBookById(id);
        }
     }
