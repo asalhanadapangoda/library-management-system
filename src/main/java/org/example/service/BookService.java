@@ -6,4 +6,5 @@ import org.example.entity.BookEntity;
 public interface BookService {
     void addBook(Book book);
     Iterable<BookEntity> getBooks();
+    boolean deleteBook(Long id);
 }

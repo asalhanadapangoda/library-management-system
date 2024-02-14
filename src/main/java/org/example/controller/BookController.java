@@ -6,21 +6,27 @@ import org.example.entity.BookEntity;
 import org.example.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/book")
+@RequestMapping
 @RequiredArgsConstructor
 public class BookController {
 
     final BookService service;
-    @PostMapping
+    @PostMapping("/book")
     @ResponseStatus(HttpStatus.CREATED)
     public void addBook(@RequestBody Book book){
         service.addBook(book);
     }
-    @GetMapping("/get")
-    public Iterable<BookEntity> getBook(){
-        return service.getBooks();
+    @GetMapping("/getBook")
+    public Iterable<BookEntity> getBook(){return service.getBooks();}
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+        public ResponseEntity<String> deleteBook(@PathVariable long id){
+        return service.deleteBook(id)?
+                 ResponseEntity.ok("Deleted"):
+                 ResponseEntity.notFound().build();
+       }
     }
-}
